@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>actividad</h1>
+    
+        <input type="text" value="" id="dato">
+        <button id="enviar">enviar</button>
+    
+    <h3 id="ver">cargue algo por favor</h3>
+    
+    <script>
+
+        var botonEnviar = document.getElementById("enviar");
+        var campoDato = document.getElementById("dato");
+        document.getElementById("ver").style.display = "none"
+
+        botonEnviar.addEventListener("click", function() {
+            var dato = campoDato.value;
+            if (dato == ""){
+                document.getElementById("ver").style.display = "block"
+                document.getElementById("ver").style.color = "red"
+                document.getElementById("ver").style.backgroundColor = "yellow"
+            }else{
+                alert("Usted ingreso "+dato)
+                console.log("Usted ingreso "+dato);
+            }
+            });
+        campoDato.addEventListener("input", function() {
+                document.getElementById("ver").style.display = "none"
+        });
+    </script>
+
+</body>
+</html>
